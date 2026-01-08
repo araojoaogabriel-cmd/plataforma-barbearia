@@ -159,7 +159,6 @@
   © 2026 Barbearia Premium
 </footer>
 
-<!-- LIBS -->
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
@@ -202,6 +201,7 @@
     horariosBase.forEach(h => {
       if (!ocupados.includes(h)) {
         const opt = document.createElement('option');
+        opt.value = h;              // ✅ ALTERAÇÃO ESSENCIAL
         opt.textContent = h;
         timeSelect.appendChild(opt);
       }
